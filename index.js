@@ -1,7 +1,7 @@
 //Define three variables for the LaunchCode shuttle - one for the starting fuel level, another for the number of astronauts aboard, and the third for the altitude the shuttle reaches.
-let startingFuelLevel
-let numberOfNauts
-let altitude
+let startingFuelLevel = " ";
+let numberOfNauts = " ";
+let altitude = " ";
 
 
 
@@ -10,8 +10,17 @@ let altitude
   a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. */
 const input = require('readline-sync');
 
+startingFuelLevel = input.question('Enter Fuel Level: ');
+startingFuelLevel = Number(startingFuelLevel);
 
-
+while (startingFuelLevel < 5000) {
+  startingFuelLevel = input.question('INSUFFICIENT FUEL - CHECK FUEL LEVEL! Re-enter Fuel Level: ');
+  startingFuelLevel = Number(startingFuelLevel);
+}
+while (startingFuelLevel > 30000){
+  startingFuelLevel = input.question('INVALID ENTRY - CHECK FUEL LEVEL! Re-enter Fuel Level: ');
+  startingFuelLevel = Number(startingFuelLevel);
+}
 
 
 
