@@ -21,15 +21,21 @@ while (startingFuelLevel < 5000 || startingFuelLevel > 30000){
   startingFuelLevel = input.question('INVALID ENTRY - CHECK FUEL LEVEL! Re-enter Fuel Level: ');
   startingFuelLevel = Number(startingFuelLevel);
 }
-
+console.log(startingFuelLevel);
 
 
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
- /*numberOfNauts = input.question('Enter Number of Astronauts: ');
+ 
+numberOfNauts = input.question('Enter Number of Astronauts: ');
 numberOfNauts = Number(numberOfNauts);
-while (numberOfNauts)
-  
+
+while (numberOfNauts < 1 || numberOfNauts > 7) {
+  numberOfNauts = input.question('INVALID ENTRY: Re-enter Number of Astronauts: ');
+  numberOfNauts = Number(numberOfNauts);
+}
+
+console.log(numberOfNauts);
   
   
 //c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
