@@ -13,11 +13,11 @@ const input = require('readline-sync');
 startingFuelLevel = input.question('Enter Fuel Level: ');
 startingFuelLevel = Number(startingFuelLevel);
 
-while (startingFuelLevel < 5000) {
+/*while (startingFuelLevel < 5000) {
   startingFuelLevel = input.question('INSUFFICIENT FUEL - CHECK FUEL LEVEL! Re-enter Fuel Level: ');
   startingFuelLevel = Number(startingFuelLevel);
-}
-while (startingFuelLevel > 30000){
+}*/
+while (startingFuelLevel < 5000 || startingFuelLevel > 30000){
   startingFuelLevel = input.question('INVALID ENTRY - CHECK FUEL LEVEL! Re-enter Fuel Level: ');
   startingFuelLevel = Number(startingFuelLevel);
 }
@@ -26,7 +26,9 @@ while (startingFuelLevel > 30000){
 
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
-  
+ /*numberOfNauts = input.question('Enter Number of Astronauts: ');
+numberOfNauts = Number(numberOfNauts);
+while (numberOfNauts)
   
   
   
