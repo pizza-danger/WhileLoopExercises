@@ -40,8 +40,20 @@ console.log(numberOfNauts);
   
 //c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
 
+while (startingFuelLevel - 100 * numberOfNauts >= 0) {
+  altitude += 50;
+  startingFuelLevel -= 100 * numberOfNauts;
+} 
 
 
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
 
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
+
+let output = (`The shuttle gained an altitude of ${altitude} km.`);
+
+if (altitude >= 2000) {
+  console.log('Orbit achieved!');
+} else {
+  console.log('Failed to reach orbit.');
+}
